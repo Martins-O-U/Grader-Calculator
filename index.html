@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <script src="grader.js"></script>
+    <style>
+        .courseInfo {
+            border: 1px solid;
+            background: yellow;
+            height: 20px;
+        }
+
+        .totalInfo {
+            border: 1px solid;
+            background: lightblue;
+            height: 20px;
+        }
+
+        section {
+            margin: 2% 20% 2% 20%;
+            border: 2px solid;
+            text-align: center;
+            padding: 20px;
+            background: lightgreen;
+        }
+
+        input {
+            width: 50%;
+            height: 20px;
+        }
+
+        button {
+            padding: 2px 5px;
+            margin-top: 5px;
+            margin-bottom: 7px;
+            border: 1px solid lightblue;
+            border-radius: 7px;
+            width: 100px;
+            font-size: 15px;
+
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <h1>Grade Calculator</h1>
+        <form>
+            <div><input type="text" id="cr" placeholder="Course Code"></div>
+            <div><input type="number" id="mr" placeholder="Mark"></div>
+            <div><input type="number" id="ch" placeholder="Credit Hours"></div>
+        </form>
+        <div>
+            <button onclick="addRecord()" class="submit">Add a record</button>
+            <button onclick="refreshElement()" class="submit">rest</button>
+        </div>
+
+        <center>
+            <p id="error">
+            <p>
+            <table>
+                <tr>
+                    <td class="courseInfo" id="cn1"></td>
+                    <td class="courseInfo" id="ch1"></td>
+                    <td class="courseInfo" id="cm1"></td>
+                    <td class="courseInfo" id="gr1"></td>
+                    <td class="courseInfo" id="gp1"></td>
+                    <td class="courseInfo" id="tp1"></td>
+                <tr>
+                    <td class="totalInfo" id="Scn">Total Marks</td>
+                    <td class="totalInfo" id="tcr"></td>
+                    <td class="totalInfo" id="t"></td>
+                    <td class="totalInfo"></td>
+                    <td class="totalInfo"></td>
+                    <td class="totalInfo" id="tpo"></td>
+                </tr>
+                <tr>
+                    <td class="totalInfo" id="cgpa"></td>
+                </tr>
+            </table>
+        </center>
+    </section>
+
+    <script>
+
+        displayCourses();
+
+    </script>
+
+</body>
+
+</HTML>
